@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $request->session('Guilherme'=>'laravel student');
-        return view('home');
+        $request->session()->put(['Guilherme'=>'laravel student']);
+        return $request->session()->all();
+//        return view('home');
     }
 }
