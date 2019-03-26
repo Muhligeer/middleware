@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
+
+
+
     return view('welcome');
 });
 
@@ -23,3 +26,5 @@ Route::get('/admin/user/roles', ['middleware'=>'role', function(){
     return "Middleware role";
 
 }]);
+
+Route::get('/admin', 'AdminController@index');

@@ -20,10 +20,12 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $request->session('Guilherme'=>'laravel student');
         return view('home');
     }
 }
